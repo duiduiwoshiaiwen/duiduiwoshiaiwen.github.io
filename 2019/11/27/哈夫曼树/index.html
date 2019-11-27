@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | Hexo</title>
+  <title>哈夫曼树 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一章 注意设置hexo 的 config文件时 :后面都要加空格">
+  <meta name="description" content="哈夫曼树简介1.基本概念 哈夫曼树又称为最优树  1、路径和路径长度 在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。 2、结点的权及带权路径长度 若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="哈夫曼树">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一章 注意设置hexo 的 config文件时 :后面都要加空格">
+<meta property="og:description" content="哈夫曼树简介1.基本概念 哈夫曼树又称为最优树  1、路径和路径长度 在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。 2、结点的权及带权路径长度 若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T05:42:54.723Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11116807-03ebaabaf9b55984.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;format&#x2F;webp">
+<meta property="og:image" content="https:&#x2F;&#x2F;gss0.bdstatic.com&#x2F;-4o3dSag_xI4khGkpoWK1HF6hhy&#x2F;baike&#x2F;crop%3D7%2C0%2C487%2C322%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26&#x2F;sign=d23de63a42ed2e73e8a6dc6cba368dbb&#x2F;63d9f2d3572c11df4dabb69d6b2762d0f703c212.jpg">
+<meta property="og:updated_time" content="2019-11-27T06:08:06.720Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;11116807-03ebaabaf9b55984.png?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;format&#x2F;webp">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,28 +155,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-哈夫曼树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      哈夫曼树
     </h1>
   
 
         
-        <a href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-26T03:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+        <a href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2019-11-27T05:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><blockquote>
-<p>注意设置hexo 的 config文件时 :后面都要加空格</p>
+        <h2 id="哈夫曼树简介"><a href="#哈夫曼树简介" class="headerlink" title="哈夫曼树简介"></a>哈夫曼树简介</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h3><blockquote>
+<p>哈夫曼树又称为最优树 </p>
+<p><strong>1、路径和路径长度</strong></p>
+<p>在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。</p>
+<p><strong>2、结点的权及带权路径长度</strong></p>
+<p>若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的乘积。</p>
+<p><strong>3、树的带权路径长度</strong></p>
+<p>树的带权路径长度规定为<strong><em>所有叶子结点</em></strong>的带权路径长度之和，记为WPL。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11116807-03ebaabaf9b55984.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="wpl计算示例"></p>
+</blockquote>
+<h3 id="2-构造哈夫曼树"><a href="#2-构造哈夫曼树" class="headerlink" title="2.构造哈夫曼树"></a>2.构造哈夫曼树</h3><p> 假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为： </p>
+<blockquote>
+<p> (1) 将w1、w2、…，wn看成是有n 棵树的森林(每棵树仅有一个结点)；</p>
+<p>(2) 在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</p>
+<p>(3)从森林中删除选取的两棵树，并将新树加入森林；</p>
+<p>(4)重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树。</p>
+<p> <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D7%2C0%2C487%2C322%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d23de63a42ed2e73e8a6dc6cba368dbb/63d9f2d3572c11df4dabb69d6b2762d0f703c212.jpg" alt="示例"></p>
 </blockquote>
 
       
@@ -254,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +286,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/26/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/11/26/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git</div>
       <i class="icon-circle-right"></i>
     </a>
   
