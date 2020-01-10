@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>LaoWen</title>
+  <title>Archives: 2020/1 | LaoWen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="LaoWen">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;01&#x2F;index.html">
 <meta property="og:site_name" content="LaoWen">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -151,89 +151,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-字符输入输出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="archive-article-date">
+  	<time datetime="2020-01-10T03:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">字符输入输出</a>
+      <a class="archive-article-title" href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">字符输入输出</a>
     </h1>
   
 
-        
-        <a href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="archive-article-date">
-  	<time datetime="2020-01-10T03:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h2><blockquote>
-<p>在一开始输入 ABC 空格 制表 回车</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(ch=getchar())&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">":"</span>&lt;&lt;(<span class="keyword">int</span>)ch&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="最后输出结果"><a href="#最后输出结果" class="headerlink" title="最后输出结果"></a>最后输出结果</h3><blockquote>
-<p>1:65</p>
-</blockquote>
-<blockquote>
-<p>2:66</p>
-</blockquote>
-<blockquote>
-<p>3:67</p>
-</blockquote>
-<blockquote>
-<p>4:32</p>
-</blockquote>
-<blockquote>
-<p>5:9</p>
-</blockquote>
-<blockquote>
-<p>6:10</p>
-</blockquote>
-<p>!!!运行过程为读取一个字符输出一下，i++，然后再一次进行while循环判断     全部输入完然后点回车才进行while循环</p>
-<p>而不是输入一个字符进行一次while循环以后再等着你输入下一个字符再进入while循环</p>
-<h2 id="putchar-“字符变量或常量”"><a href="#putchar-“字符变量或常量”" class="headerlink" title="putchar(“字符变量或常量”)"></a>putchar(“字符变量或常量”)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch =getchar();</span><br><span class="line"><span class="built_in">putchar</span>(ch);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="字符输入输出时需要注意的问题"><a href="#字符输入输出时需要注意的问题" class="headerlink" title="字符输入输出时需要注意的问题"></a>字符输入输出时需要注意的问题</h1><p>scanf 和 getchar 都会把空格键,回车键这些读入缓冲区</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%c%c"</span>,&amp;a,&amp;b);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c%C\n"</span>,a,b);</span><br><span class="line">        n--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输入:</p>
-<p>4 空格</p>
-<p>ab 空格</p>
-<p>cd 空格</p>
-<p>输出结果:</p>
-<p>4</p>
-<p>ab</p>
-<p>a</p>
-<p>b</p>
-<p>cd</p>
-<p>cd</p>
-<blockquote>
-<p>缓冲区内容为: 4 空格 a b 空格 c d 空格 </p>
-</blockquote>
-<p>为了消除scanf 最后的回车scanf后面加个getchar() 吞掉回车</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%c%c"</span>,&amp;a,&amp;b);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c%C\n"</span>,a,b);</span><br><span class="line">        n--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="c-中的cin-cout-会自动过滤掉空格-回车-只打印能打印的-scanf和getchar不会"><a href="#c-中的cin-cout-会自动过滤掉空格-回车-只打印能打印的-scanf和getchar不会" class="headerlink" title="c++中的cin cout 会自动过滤掉空格 回车 只打印能打印的 scanf和getchar不会"></a>c++中的cin cout 会自动过滤掉空格 回车 只打印能打印的 scanf和getchar不会</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -245,529 +190,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-idea配置maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/">idea配置maven</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/" class="archive-article-date">
-  	<time datetime="2019-12-05T05:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="在idea里设置本地下载好的maven"><a href="#在idea里设置本地下载好的maven" class="headerlink" title="在idea里设置本地下载好的maven"></a>在idea里设置本地下载好的maven</h2><p><img src="E:%5Cjavaweb-biji%5Cmavenbiji%5CE4Z%6" alt="maven 配置">)FPVC6N}TN6YASQ@{8.png)</p>
-<p>指定Runner里的VM Options 为 -DarchetypeCatalog=internal</p>
-<h3 id="使用骨架建立普通java项目选择结尾为quickstart选项"><a href="#使用骨架建立普通java项目选择结尾为quickstart选项" class="headerlink" title="使用骨架建立普通java项目选择结尾为quickstart选项"></a>使用骨架建立普通java项目选择结尾为quickstart选项</h3><p>Groupld为公司名称</p>
-<p>Artifactld 项目名称</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-求学校人数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/">求学校人数</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2019-11-28T08:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数"><a href="#某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数" class="headerlink" title="某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数."></a>某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数.</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="keyword">int</span> i;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">999</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">   <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">2</span>&amp;&amp;i%<span class="number">7</span>==<span class="number">3</span>&amp;&amp;i%<span class="number">3</span>==<span class="number">1</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">"学生总数为%d人\n"</span>,i);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-字符串-Spile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/">字符串 Spile</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/" class="archive-article-date">
-  	<time datetime="2019-11-27T06:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="字符串的split-用法"><a href="#字符串的split-用法" class="headerlink" title="字符串的split()用法"></a>字符串的split()用法</h2><p>String[] aa = “aaa|bbb|ccc”.split(“|”);</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String[] aa = <span class="string">"aaa|bbb|ccc"</span>.split(<span class="string">"|"</span>);</span><br><span class="line"><span class="comment">//String[] aa = "aaa|bbb|ccc".split("\\|"); 这样才能得到正确的结果</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;aa.length ; i++ ) &#123;</span><br><span class="line"></span><br><span class="line">  System.out.println(<span class="string">"--"</span>+aa[i]); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>例如输入字符串1,2,3,4</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String [] str = string.spilt(<span class="string">""</span>);</span><br><span class="line"><span class="comment">//""不行用''试试</span></span><br><span class="line">List &lt;<span class="keyword">int</span>&gt; a =<span class="keyword">new</span> List&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">    a.add(Interage(str[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-哈夫曼树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2019-11-27T05:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="哈夫曼树简介"><a href="#哈夫曼树简介" class="headerlink" title="哈夫曼树简介"></a>哈夫曼树简介</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h3><blockquote>
-<p>哈夫曼树又称为最优树 </p>
-<p><strong>1、路径和路径长度</strong></p>
-<p>在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。</p>
-<p><strong>2、结点的权及带权路径长度</strong></p>
-<p>若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的乘积。</p>
-<p><strong>3、树的带权路径长度</strong></p>
-<p>树的带权路径长度规定为<strong><em>所有叶子结点</em></strong>的带权路径长度之和，记为WPL。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11116807-03ebaabaf9b55984.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="wpl计算示例"></p>
-</blockquote>
-<h3 id="2-构造哈夫曼树"><a href="#2-构造哈夫曼树" class="headerlink" title="2.构造哈夫曼树"></a>2.构造哈夫曼树</h3><p> 假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为： </p>
-<blockquote>
-<p> (1) 将w1、w2、…，wn看成是有n 棵树的森林(每棵树仅有一个结点)；</p>
-<p>(2) 在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</p>
-<p>(3)从森林中删除选取的两棵树，并将新树加入森林；</p>
-<p>(4)重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树。</p>
-<p> <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D7%2C0%2C487%2C322%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d23de63a42ed2e73e8a6dc6cba368dbb/63d9f2d3572c11df4dabb69d6b2762d0f703c212.jpg" alt="示例"></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/git/">git</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/git/" class="archive-article-date">
-  	<time datetime="2019-11-26T15:25:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
-<p>添加文件到Git仓库，分两步：</p>
-<ol>
-<li>使用命令<code>git add</code>，注意，可反复多次使用，添加多个文件；</li>
-<li>使用命令<code>git commit -m</code>，完成。</li>
-</ol>
-<p>用notepad++写不要用windows记事本</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-26T03:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><blockquote>
-<p>注意设置hexo 的 config文件时 :后面都要加空格</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-26T02:53:12.742Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -789,9 +224,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
