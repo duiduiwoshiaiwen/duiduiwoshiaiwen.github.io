@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>求学校人数 | LaoWen</title>
+  <title>快速排序思想解决问题的例子 | LaoWen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数.123456789#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;int i; for(i=999;i&amp;gt;0;i--)   if(i%5==2&amp;amp;&amp;amp;i%7==3&amp;amp;&amp;amp;i%3==1)     break; printf(&quot;学生总数为%d人\n">
+  <meta name="description" content="1.一个长度为 n 的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为 O(n)。根据快速排序思想，设置两个指针一个指向数组头部，一个指向数组尾部 在设置一个遍历指针从头到尾遍历数组 当遍历指针所指的数为负数时就与头指针所指的数换位置，并且头指针向后移一位(因为已经确定之前头指针所指的数肯定是负数，遍历指针之前的数都已经是负数了)，遍历指针也向">
 <meta property="og:type" content="article">
-<meta property="og:title" content="求学校人数">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0&#x2F;index.html">
+<meta property="og:title" content="快速排序思想解决问题的例子">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;18&#x2F;%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%80%9D%E6%83%B3%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E4%BE%8B%E5%AD%90&#x2F;index.html">
 <meta property="og:site_name" content="LaoWen">
-<meta property="og:description" content="某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数.123456789#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;int i; for(i=999;i&amp;gt;0;i--)   if(i%5==2&amp;amp;&amp;amp;i%7==3&amp;amp;&amp;amp;i%3==1)     break; printf(&quot;学生总数为%d人\n">
+<meta property="og:description" content="1.一个长度为 n 的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为 O(n)。根据快速排序思想，设置两个指针一个指向数组头部，一个指向数组尾部 在设置一个遍历指针从头到尾遍历数组 当遍历指针所指的数为负数时就与头指针所指的数换位置，并且头指针向后移一位(因为已经确定之前头指针所指的数肯定是负数，遍历指针之前的数都已经是负数了)，遍历指针也向">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-28T08:30:15.596Z">
+<meta property="og:updated_time" content="2020-01-18T09:37:15.630Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="LaoWen" type="application/atom+xml">
@@ -152,27 +152,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-求学校人数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-快速排序思想解决问题的例子" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      求学校人数
+      快速排序思想解决问题的例子
     </h1>
   
 
         
-        <a href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2019-11-28T08:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
+        <a href="/2020/01/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%80%9D%E6%83%B3%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E4%BE%8B%E5%AD%90/" class="archive-article-date">
+  	<time datetime="2020-01-18T06:53:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数"><a href="#某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数" class="headerlink" title="某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数."></a>某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数.</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="keyword">int</span> i;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">999</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">   <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">2</span>&amp;&amp;i%<span class="number">7</span>==<span class="number">3</span>&amp;&amp;i%<span class="number">3</span>==<span class="number">1</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">"学生总数为%d人\n"</span>,i);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="1-一个长度为-n-的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为-O-n-。"><a href="#1-一个长度为-n-的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为-O-n-。" class="headerlink" title="1.一个长度为 n 的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为 O(n)。"></a>1.一个长度为 n 的数组由负数、0、正数组成。编写函数，将其重新排序为前段都是负数，后段均为非负数的结构。要求时间复杂度为 O(n)。</h4><p>根据快速排序思想，设置两个指针一个指向数组头部，一个指向数组尾部</p>
+<p>在设置一个遍历指针从头到尾遍历数组</p>
+<p>当遍历指针所指的数为负数时就与头指针所指的数换位置，并且头指针向后移一位(因为已经确定之前头指针所指的数肯定是负数，遍历指针之前的数都已经是负数了)，遍历指针也向后移一位</p>
+<p>当遍历指针所指的数为0时，遍历指针就向后移一位</p>
+<p>当遍历指针所指的数为正数时就与尾指针所指的数换位置，并且尾指针向前移一位，遍历指针不动(因为不能确定交换过来的是正数还是负数还是0)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> first=<span class="number">0</span>,second=n<span class="number">-1</span>,i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=second)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            sort(a[i],a[first]);</span><br><span class="line">            first++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            sort(a[i],a[second]);</span><br><span class="line">            second--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-荷兰国旗"><a href="#2-荷兰国旗" class="headerlink" title="2.荷兰国旗"></a>2.<strong>荷兰国旗</strong></h4><p>给定一个包含红色、白色和蓝色，一共 <em>n</em> 个元素的数组，<strong>原地</strong>对它们进行排序，使得相同</p>
+<p>颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
+<p>此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p>
+<p><strong>注意</strong>:不能使用代码库中的排序函数来解决这道题。</p>
+<p><strong>输入</strong>:[2,0,2,1,1,0]</p>
+<p><strong>输出</strong>: [0,0,1,1,2,2]</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> first=<span class="number">0</span>,second=n<span class="number">-1</span>,i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=second)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            sort(a[i],a[first]);</span><br><span class="line">            first++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i]==<span class="number">1</span>)&#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a[i]==<span class="number">2</span>)&#123;</span><br><span class="line">            sort(a[i],a[second]);</span><br><span class="line">            second--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -253,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/18/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%80%9D%E6%83%B3%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E7%9A%84%E4%BE%8B%E5%AD%90/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          idea配置maven
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字符串 Spile</div>
+    <a href="/2020/01/11/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快速排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
