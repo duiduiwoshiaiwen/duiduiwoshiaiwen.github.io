@@ -151,6 +151,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-哈夫曼树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2019-11-27T05:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="哈夫曼树简介"><a href="#哈夫曼树简介" class="headerlink" title="哈夫曼树简介"></a>哈夫曼树简介</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h3><blockquote>
+<p>哈夫曼树又称为最优树 </p>
+<p><strong>1、路径和路径长度</strong></p>
+<p>在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。</p>
+<p><strong>2、结点的权及带权路径长度</strong></p>
+<p>若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的乘积。</p>
+<p><strong>3、树的带权路径长度</strong></p>
+<p>树的带权路径长度规定为<strong><em>所有叶子结点</em></strong>的带权路径长度之和，记为WPL。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11116807-03ebaabaf9b55984.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="wpl计算示例"></p>
+</blockquote>
+<h3 id="2-构造哈夫曼树"><a href="#2-构造哈夫曼树" class="headerlink" title="2.构造哈夫曼树"></a>2.构造哈夫曼树</h3><p> 假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为： </p>
+<blockquote>
+<p> (1) 将w1、w2、…，wn看成是有n 棵树的森林(每棵树仅有一个结点)；</p>
+<p>(2) 在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</p>
+<p>(3)从森林中删除选取的两棵树，并将新树加入森林；</p>
+<p>(4)重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树。</p>
+<p> <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D7%2C0%2C487%2C322%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d23de63a42ed2e73e8a6dc6cba368dbb/63d9f2d3572c11df4dabb69d6b2762d0f703c212.jpg" alt="示例"></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
