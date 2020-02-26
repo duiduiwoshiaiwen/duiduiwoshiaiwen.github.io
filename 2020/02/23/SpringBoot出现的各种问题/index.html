@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>LaoWen</title>
+  <title>SpringBoot出现的各种问题 | LaoWen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LaoWen">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;page&#x2F;2&#x2F;index.html">
+  <meta name="description" content="1.无法解析符号 ‘RestController’1.在pom.xml里插入如下代码： org.springframework.boot spring-boot-starter-web   2.选中项目，右键找到Maven 点击Reimport 更新依赖包。 3.在File里点击Invalidate And Restart 重启下。 4.重启后的编辑器按alt+enter自动导入，或手动引入 im">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot出现的各种问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;23&#x2F;SpringBoot%E5%87%BA%E7%8E%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="LaoWen">
+<meta property="og:description" content="1.无法解析符号 ‘RestController’1.在pom.xml里插入如下代码： org.springframework.boot spring-boot-starter-web   2.选中项目，右键找到Maven 点击Reimport 更新依赖包。 3.在File里点击Invalidate And Restart 重启下。 4.重启后的编辑器按alt+enter自动导入，或手动引入 im">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-26T08:04:14.603Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="LaoWen" type="application/atom+xml">
@@ -149,42 +152,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-利用快慢指针求未知长度链表的相关问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-SpringBoot出现的各种问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/%E5%88%A9%E7%94%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E6%B1%82%E6%9C%AA%E7%9F%A5%E9%95%BF%E5%BA%A6%E9%93%BE%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">查找链表中间结点</a>
+    <h1 class="article-title" itemprop="name">
+      SpringBoot出现的各种问题
     </h1>
   
 
         
-        <a href="/2020/01/10/%E5%88%A9%E7%94%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E6%B1%82%E6%9C%AA%E7%9F%A5%E9%95%BF%E5%BA%A6%E9%93%BE%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-01-10T04:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
+        <a href="/2020/02/23/SpringBoot%E5%87%BA%E7%8E%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-02-23T14:37:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何快速找到未知长度单链表的中间结点"><a href="#如何快速找到未知长度单链表的中间结点" class="headerlink" title="如何快速找到未知长度单链表的中间结点"></a>如何快速找到未知长度单链表的中间结点</h1><h2 id="设置快慢指针"><a href="#设置快慢指针" class="headerlink" title="设置快慢指针"></a>设置快慢指针</h2><p>设置两个指针<em>search，</em>mid 都指向链表的头结点。其中<em>search 的移动速度是</em>mid 的<br>2 倍。当*search 指向末尾结点的时候，这时 mid 正好就在正中间了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Linklist <span class="title">FindZhong</span><span class="params">(Linklist *head)</span></span>&#123;</span><br><span class="line">    Linklist *first=head;</span><br><span class="line">    Linklist *second=head;</span><br><span class="line">    <span class="keyword">while</span>(first-&gt;next!=null)&#123;</span><br><span class="line">        <span class="keyword">if</span>(first-&gt;next-&gt;next!=null)&#123;</span><br><span class="line">           first= first-&gt;next-&gt;next;</span><br><span class="line">            second=second-&gt;next;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            first=first-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="1-无法解析符号-‘RestController’"><a href="#1-无法解析符号-‘RestController’" class="headerlink" title="1.无法解析符号 ‘RestController’"></a>1.无法解析符号 ‘RestController’</h3><p>1.在pom.xml里插入如下代码：<br><dependency></p>
+<p><groupId>org.springframework.boot</groupId></p>
+<p><artifactId>spring-boot-starter-web</artifactId></p>
+</dependency>
+
+<p>2.选中项目，右键找到Maven 点击Reimport 更新依赖包。</p>
+<p>3.在File里点击Invalidate And Restart 重启下。</p>
+<p>4.重启后的编辑器按alt+enter自动导入，或手动引入</p>
+<p>import org.springframework.web.bind.annotation.RequestMapping;<br>import org.springframework.web.bind.annotation.RestController;</p>
+<h3 id="2-ConfigurationProperties-prefix-“-“"><a href="#2-ConfigurationProperties-prefix-“-“" class="headerlink" title="2. @ConfigurationProperties(prefix = “ “)"></a>2. @ConfigurationProperties(prefix = “ “)</h3><p>@ConfigurationProperties:告诉springboot将本类中的所有属性和配置文件中相关的配置进行绑定</p>
+<p>prefix =“ ” ：配置文件中哪个下面的所有属性进行一一映射</p>
+<p>配置文件处理器，配置文件进行绑定就会有提示</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-autoconfiguration-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Component"><a href="#3-Component" class="headerlink" title="3.@Component"></a>3.@Component</h3><p>1、<a href="https://my.oschina.net/u/1774615" target="_blank" rel="noopener">@controller</a> 控制器（注入服务）</p>
+<ul>
+<li>用于标注控制层，相当于struts中的action层</li>
+</ul>
+<p>2、<a href="https://my.oschina.net/service" target="_blank" rel="noopener">@service</a> 服务（注入dao）</p>
+<ul>
+<li>用于标注服务层，主要用来进行业务的逻辑处理</li>
+</ul>
+<p>3、@repository（实现dao访问）</p>
+<ul>
+<li>用于标注数据访问层，也可以说用于标注数据访问组件，即DAO组件.</li>
+</ul>
+<p>4、<a href="https://my.oschina.net/u/3907912" target="_blank" rel="noopener">@component</a> （把普通pojo实例化到spring容器中，相当于配置文件中的</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>）</p>
+<ul>
+<li>泛指各种组件，就是说当我们的类不属于各种归类的时候（不属于@Controller、@Services等的时候），我们就可以使用@Component来标注这个类。</li>
+</ul>
+<h3 id="4-Autowired"><a href="#4-Autowired" class="headerlink" title="4.@Autowired"></a>4.@Autowired</h3><p>Spring 2.5 以后 它可以对类成员变量、方法及构造函数进行标注，完成自动装配的工作。 通过 @Autowired的使用来消除 set ，get方法。</p>
+<p>其实在启动spring IoC时，容器自动装载了一个AutowiredAnnotationBeanPostProcessor后置处理器，当容器扫描到@Autowied、@Resource或@Inject时，就会在IoC容器自动查找需要的bean，并装配给该对象的属性</p>
+<h3 id="5-PropertySource"><a href="#5-PropertySource" class="headerlink" title="5.@PropertySource"></a>5.@PropertySource</h3><p>获取指定的配置文件，如：person.properties</p>
+<p>@PropertySource(value={“classpath:person.properties”})</p>
+<h3 id="6-ImportResource"><a href="#6-ImportResource" class="headerlink" title="6.@ImportResource"></a>6.@ImportResource</h3><p>导入Spring的配置文件</p>
+<h3 id="7-Configuration"><a href="#7-Configuration" class="headerlink" title="7.@Configuration"></a>7.@Configuration</h3><p> @Configuration:指明当前类是一个配置类；就是来替代之前的Spring配置文件</p>
+<h3 id="8-Bean"><a href="#8-Bean" class="headerlink" title="8.@Bean"></a>8.@Bean</h3><p>将方法的返回值添加到容器中；容器中这个组件的默认ID就是方法名</p>
+<h3 id="9-SpringBoot推荐写法"><a href="#9-SpringBoot推荐写法" class="headerlink" title="9.SpringBoot推荐写法"></a>9.SpringBoot推荐写法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Configuration</span>:指明当前类是一个配置类；就是来替代之前的Spring配置文件</span></span><br><span class="line"><span class="comment"> * Spring配置文件中用&lt;bean&gt;&lt;/bean&gt;添加组件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将方法的返回值添加到容器中；容器中这个组件的默认ID就是方法名</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Helloservice <span class="title">helloservice</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Helloservice();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用@Bean给容器添加组件</p>
+<h3 id="10-属性配置占位符"><a href="#10-属性配置占位符" class="headerlink" title="10.属性配置占位符"></a>10.属性配置占位符</h3><p><strong>${}</strong>   可以在配置文件中引用前面配置过的属性</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">app.name</span>=<span class="string">Myapp</span></span><br><span class="line"><span class="meta">app.desc</span>=<span class="string">$&#123;app.name&#125;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h1 id="删除链表的倒数第-N-个节点"><a href="#删除链表的倒数第-N-个节点" class="headerlink" title="删除链表的倒数第 N 个节点"></a>删除链表的倒数第 N 个节点</h1><p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
-<p>给定一个链表: <strong>1-&gt;2-&gt;3-&gt;4-&gt;5</strong>, 和 <strong>n</strong> <strong>= 2</strong>.</p>
-<p>当删除了倒数第二个节点后，链表变为 <strong>1-&gt;2-&gt;3-&gt;5</strong>.</p>
-<p>思路:用两个节点，删除让前一个节点比后一个节点先跑n次，然后两个一起跑。当前一个节点遍历结束或者为空的时候，后一个节点是要删除的元素，但是要删除一个元素，必须知道它的前一个节点，其实遍历的时候就不用等到最后一个节点为空，可以在最后一个节点的next域为空的时候结束循环。这样，后一个节点的指向的下一个元素就是要删除的元素，将其删除即可。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Linklist *<span class="title">removeNthFromEnd</span><span class="params">(Linklist *head,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    Linklist *first,*second;</span><br><span class="line">    first=head;</span><br><span class="line">    second=head;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        first=first-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(first-&gt;next==null)&#123;</span><br><span class="line">            <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(first-&gt;next!=null)&#123;</span><br><span class="line">        first=first-&gt;next;</span><br><span class="line">        second=second-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    second-&gt;next=second-&gt;next-&gt;next;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>${app.name:默认值}来指定找不到属性时的默认值</p>
+<h3 id="11-Profile"><a href="#11-Profile" class="headerlink" title="11.Profile"></a>11.Profile</h3><h4 id="1-多Profile文件"><a href="#1-多Profile文件" class="headerlink" title="1.多Profile文件"></a>1.多Profile文件</h4><p>我们在主配置文件编写的时候，文件名可以是 application-{profile}.properties/yml</p>
+<p>默认使用application.properties的配置</p>
+<h4 id="2-yml支持多文档块方式"><a href="#2-yml支持多文档块方式" class="headerlink" title="2.yml支持多文档块方式"></a>2.yml支持多文档块方式</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8084</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">prod</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h4 id="3-激活指定profile"><a href="#3-激活指定profile" class="headerlink" title="3.激活指定profile"></a>3.激活指定profile</h4><p>​        1.在配置文件中指定  例如： spring.profiles.active=dev</p>
+<p>​        2.命令行:</p>
+<p>​            java -jar   [***.jar]  – spring.profiles.active=dev</p>
+<p>​        3.虚拟机参数</p>
+<p>​            -Dspring.profiles.active=dev</p>
+<h3 id="12-自动配置原理"><a href="#12-自动配置原理" class="headerlink" title="12.自动配置原理"></a>12.自动配置原理</h3><p>一脸懵逼以后再回来看这部分</p>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -193,16 +265,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/10/%E5%88%A9%E7%94%A8%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%E6%B1%82%E6%9C%AA%E7%9F%A5%E9%95%BF%E5%BA%A6%E9%93%BE%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/23/SpringBoot%E5%87%BA%E7%8E%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/02/24/yaml%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          yaml语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/22/linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -222,702 +362,14 @@
 
 
 
-
-  
-    <article id="post-写markdown时候注意事项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/%E5%86%99markdown%E6%97%B6%E5%80%99%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">写markdown时候注意事项</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/10/%E5%86%99markdown%E6%97%B6%E5%80%99%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="archive-article-date">
-  	<time datetime="2020-01-10T03:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="写标题时-title-date-tags-这些的-后面都要加空格"><a href="#写标题时-title-date-tags-这些的-后面都要加空格" class="headerlink" title="写标题时 title: date: tags: 这些的:后面都要加空格"></a>写标题时 title: date: tags: 这些的:后面都要加空格</h3><p>当出现can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1:时</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">一些注意事项</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/10/%E5%86%99markdown%E6%97%B6%E5%80%99%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-字符输入输出" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">字符输入输出</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="archive-article-date">
-  	<time datetime="2020-01-10T03:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="getchar"><a href="#getchar" class="headerlink" title="getchar()"></a>getchar()</h2><blockquote>
-<p>在一开始输入 ABC 空格 制表 回车</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(ch=getchar())&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">":"</span>&lt;&lt;(<span class="keyword">int</span>)ch&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="最后输出结果"><a href="#最后输出结果" class="headerlink" title="最后输出结果"></a>最后输出结果</h3><blockquote>
-<p>1:65</p>
-</blockquote>
-<blockquote>
-<p>2:66</p>
-</blockquote>
-<blockquote>
-<p>3:67</p>
-</blockquote>
-<blockquote>
-<p>4:32</p>
-</blockquote>
-<blockquote>
-<p>5:9</p>
-</blockquote>
-<blockquote>
-<p>6:10</p>
-</blockquote>
-<p>!!!运行过程为读取一个字符输出一下，i++，然后再一次进行while循环判断     全部输入完然后点回车才进行while循环</p>
-<p>而不是输入一个字符进行一次while循环以后再等着你输入下一个字符再进入while循环</p>
-<h2 id="putchar-“字符变量或常量”"><a href="#putchar-“字符变量或常量”" class="headerlink" title="putchar(“字符变量或常量”)"></a>putchar(“字符变量或常量”)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch =getchar();</span><br><span class="line"><span class="built_in">putchar</span>(ch);</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="字符输入输出时需要注意的问题"><a href="#字符输入输出时需要注意的问题" class="headerlink" title="字符输入输出时需要注意的问题"></a>字符输入输出时需要注意的问题</h1><p>scanf 和 getchar 都会把空格键,回车键这些读入缓冲区</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%c%c"</span>,&amp;a,&amp;b);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c%C\n"</span>,a,b);</span><br><span class="line">        n--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>输入:</p>
-<p>4 空格</p>
-<p>ab 空格</p>
-<p>cd 空格</p>
-<p>输出结果:</p>
-<p>4</p>
-<p>ab</p>
-<p>a</p>
-<p>b</p>
-<p>cd</p>
-<p>cd</p>
-<blockquote>
-<p>缓冲区内容为: 4 空格 a b 空格 c d 空格 </p>
-</blockquote>
-<p>为了消除scanf 最后的回车scanf后面加个getchar() 吞掉回车</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">char</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%c%c"</span>,&amp;a,&amp;b);</span><br><span class="line">        getchar();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c%C\n"</span>,a,b);</span><br><span class="line">        n--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="c-中的cin-cout-会自动过滤掉空格-回车-只打印能打印的-scanf和getchar不会"><a href="#c-中的cin-cout-会自动过滤掉空格-回车-只打印能打印的-scanf和getchar不会" class="headerlink" title="c++中的cin cout 会自动过滤掉空格 回车 只打印能打印的 scanf和getchar不会"></a>c++中的cin cout 会自动过滤掉空格 回车 只打印能打印的 scanf和getchar不会</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">字符与字符串的输入输出</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/10/%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-idea配置maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/">idea配置maven</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/" class="archive-article-date">
-  	<time datetime="2019-12-05T05:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="在idea里设置本地下载好的maven"><a href="#在idea里设置本地下载好的maven" class="headerlink" title="在idea里设置本地下载好的maven"></a>在idea里设置本地下载好的maven</h2><p><img src="E:%5Cjavaweb-biji%5Cmavenbiji%5CE4Z%6" alt="maven 配置">)FPVC6N}TN6YASQ@{8.png)</p>
-<p>指定Runner里的VM Options 为 -DarchetypeCatalog=internal</p>
-<h3 id="使用骨架建立普通java项目选择结尾为quickstart选项"><a href="#使用骨架建立普通java项目选择结尾为quickstart选项" class="headerlink" title="使用骨架建立普通java项目选择结尾为quickstart选项"></a>使用骨架建立普通java项目选择结尾为quickstart选项</h3><p>Groupld为公司名称</p>
-<p>Artifactld 项目名称</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/05/idea%E9%85%8D%E7%BD%AEmaven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-求学校人数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/">求学校人数</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2019-11-28T08:28:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数"><a href="#某学校有近千名学生在操场排队-5人一行余2人-7人一行余人3-3人一行余1人-求该校的学生总数" class="headerlink" title="某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数."></a>某学校有近千名学生在操场排队,5人一行余2人,7人一行余人3,3人一行余1人,求该校的学生总数.</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="keyword">int</span> i;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">999</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">   <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">2</span>&amp;&amp;i%<span class="number">7</span>==<span class="number">3</span>&amp;&amp;i%<span class="number">3</span>==<span class="number">1</span>)</span><br><span class="line">     <span class="keyword">break</span>;</span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">"学生总数为%d人\n"</span>,i);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/28/%E6%B1%82%E5%AD%A6%E6%A0%A1%E4%BA%BA%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-字符串-Spile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/">字符串 Spile</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/" class="archive-article-date">
-  	<time datetime="2019-11-27T06:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="字符串的split-用法"><a href="#字符串的split-用法" class="headerlink" title="字符串的split()用法"></a>字符串的split()用法</h2><p>String[] aa = “aaa|bbb|ccc”.split(“|”);</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String[] aa = <span class="string">"aaa|bbb|ccc"</span>.split(<span class="string">"|"</span>);</span><br><span class="line"><span class="comment">//String[] aa = "aaa|bbb|ccc".split("\\|"); 这样才能得到正确的结果</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;aa.length ; i++ ) &#123;</span><br><span class="line"></span><br><span class="line">  System.out.println(<span class="string">"--"</span>+aa[i]); </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>例如输入字符串1,2,3,4</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String [] str = string.spilt(<span class="string">""</span>);</span><br><span class="line"><span class="comment">//""不行用''试试</span></span><br><span class="line">List &lt;<span class="keyword">int</span>&gt; a =<span class="keyword">new</span> List&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">    a.add(Interage(str[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/%E5%AD%97%E7%AC%A6%E4%B8%B2-Spile/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-哈夫曼树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2019-11-27T05:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="哈夫曼树简介"><a href="#哈夫曼树简介" class="headerlink" title="哈夫曼树简介"></a>哈夫曼树简介</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h3><blockquote>
-<p>哈夫曼树又称为最优树 </p>
-<p><strong>1、路径和路径长度</strong></p>
-<p>在一棵树中，从一个结点往下可以达到的孩子或孙子结点之间的通路，称为路径。通路中分支的数目称为路径长度。若规定根结点的层数为1，则从根结点到第L层结点的路径长度为L-1。</p>
-<p><strong>2、结点的权及带权路径长度</strong></p>
-<p>若将树中结点赋给一个有着某种含义的数值，则这个数值称为该结点的权。结点的带权路径长度为：从根结点到该结点之间的路径长度与该结点的权的乘积。</p>
-<p><strong>3、树的带权路径长度</strong></p>
-<p>树的带权路径长度规定为<strong><em>所有叶子结点</em></strong>的带权路径长度之和，记为WPL。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11116807-03ebaabaf9b55984.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="wpl计算示例"></p>
-</blockquote>
-<h3 id="2-构造哈夫曼树"><a href="#2-构造哈夫曼树" class="headerlink" title="2.构造哈夫曼树"></a>2.构造哈夫曼树</h3><p> 假设有n个权值，则构造出的哈夫曼树有n个叶子结点。 n个权值分别设为 w1、w2、…、wn，则哈夫曼树的构造规则为： </p>
-<blockquote>
-<p> (1) 将w1、w2、…，wn看成是有n 棵树的森林(每棵树仅有一个结点)；</p>
-<p>(2) 在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</p>
-<p>(3)从森林中删除选取的两棵树，并将新树加入森林；</p>
-<p>(4)重复(2)、(3)步，直到森林中只剩一棵树为止，该树即为所求得的哈夫曼树。</p>
-<p> <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D7%2C0%2C487%2C322%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d23de63a42ed2e73e8a6dc6cba368dbb/63d9f2d3572c11df4dabb69d6b2762d0f703c212.jpg" alt="示例"></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/git/">git</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/git/" class="archive-article-date">
-  	<time datetime="2019-11-26T15:25:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
-<p>添加文件到Git仓库，分两步：</p>
-<ol>
-<li>使用命令<code>git add</code>，注意，可反复多次使用，添加多个文件；</li>
-<li>使用命令<code>git commit -m</code>，完成。</li>
-</ol>
-<p>用notepad++写不要用windows记事本</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-26T03:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><blockquote>
-<p>注意设置hexo 的 config文件时 :后面都要加空格</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-26T02:53:12.742Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -940,8 +392,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
